@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de credenciales</title>
+    <link rel="stylesheet" href="../CSS/StyleFinalizaCompra.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById('checkout-form');
+            var button = form.querySelector('.checkout-button');
+
+            function checkForm() {
+                var isValid = true;
+                form.querySelectorAll('input[required], textarea[required]').forEach(function(input) {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                    }
+                });
+                button.disabled = !isValid;
+            }
+
+            function handleButtonClick(event) {
+                event.preventDefault(); // Prevenir el envío del formulario por defecto
+                if (button.disabled) {
+                    return; // No hacer nada si el botón está deshabilitado
+                }
+                DesplassToIndex(); // Llamar a la función de redirección
+            }
+
+            form.addEventListener('input', function() {
+                checkForm();
+            });
+
+            button.addEventListener('click', handleButtonClick);
+
+            checkForm(); // Llamar a checkForm al cargar la página para establecer el estado inicial del botón
+        });
+
+        function DesplassToIndex() {
+            window.location.href = 'Anti-CAPTCHA.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Registro de Credenciales</h1>
+    </header>
+    <main>
+        <form id="checkout-form">
+            <h2>Información de Envío</h2>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="codigo-postal">Código Postal:</label>
+            <input type="text" id="codigo-postal" name="codigo-postal" required>
+            
+            <label for="referencia">Referencia del Domicilio:</label>
+            <textarea id="referencia" name="referencia"></textarea>
+            
+            <h2>Información de Pago</h2>
+            <label for="tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="tarjeta" name="tarjeta" required>
+            
+            <label for="fecha">Fecha de Expiración:</label>
+            <input type="text" id="fecha" name="fecha" placeholder="MM/AA" required>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required>
+
+            <button type="submit" class="checkout-button" disabled>Confirmar Compra</button>
+            
+        </form>
+    </main>
+</body>
+</html>

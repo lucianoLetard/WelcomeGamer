@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../CSS/styleCarrito.css">
+    <script>
+        function DesplassToIndex() {
+            window.location.href = 'finalizaCompra.html'
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+    <main>
+        <!-- PRIMER PRODUCTO -->
+        <div class="cart-container">
+            <div class="cart-item" id="item1">
+                <img src="../Imagenes/mauseR.jpg" alt="#" class="product-image">
+                <div class="product-details">
+                    <h2 class="product-name">Producto 1</h2>
+                    <p class="product-price">$39.00 USD</p>
+                    <div class="product-quantity">
+                        <label for="quantity1">Cantidad:</label>
+                        <input type="number" id="quantity1" value="1" min="1">
+                    </div>
+                </div>
+                <button class="remove-button">Eliminar</button>
+            </div>
+            <!-- SEGUNDO PRODUCTO -->
+            <div class="cart-item" id="item2">
+                <img src="../Imagenes/monitor1.jpg" alt="#" class="product-image">
+                <div class="product-details">
+                    <h2 class="product-name">Producto 2</h2>
+                    <p class="product-price">$215.00 USD</p>
+                    <div class="product-quantity">
+                        <label for="quantity2">Cantidad:</label>
+                        <input type="number" id="quantity2" value="1" min="1">
+                    </div>
+                </div>
+                <button class="remove-button">Eliminar</button>
+            </div>
+            <!-- TERCER PRODUCTO -->
+            <div class="cart-item" id="item3">
+                <img src="../Imagenes/teclado1.jpg" alt="#" class="product-image">
+                <div class="product-details">
+                    <h2 class="product-name">Producto 3</h2>
+                    <p class="product-price">$39.00 USD</p>
+                    <div class="product-quantity">
+                        <label for="quantity3">Cantidad:</label>
+                        <input type="number" id="quantity3" value="1" min="1">
+                    </div>
+                </div>
+                <button class="remove-button">Eliminar</button>
+            </div>
+            <!-- MUESTRA DE TOTAL Y FINALIZAR COMPRA -->
+            <div class="cart-total">
+                <h3>Total: $293 USD</h3>
+                <button class="checkout-button" onclick="DesplassToIndex()">Finalizar Compra</button>
+            </div>
+        </div>
+    </main>
+    <script src="../JavaScript/backCarrito.js"></script>
+    <script src="../JavaScript/EliminProducCarrito.js"></script>
+</body>
+</html>
+
+
+

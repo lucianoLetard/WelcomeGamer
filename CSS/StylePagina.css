@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap"); 
+
+/*BOTONES SUPERIORES*/
+
+.headert{
+  background-color: none; /* define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave transparent */
+  display: flex; /*los nodos hijo se pueden distribuir en dirección vertical u horizontal y se pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre*/
+  justify-content: center;/*para una columna, esto empuja los elementos a la parte inferior del contenedor.*/
+  align-items: center; /*sirve para alinear elementos flexibles a lo largo del eje transversal. alinea los elementos hacia el centro. */
+  height: 55px;/*ancho*/
+  padding: 5px 10%;/*sirve para dar formato  y diseño. en este caso crea alrededor del contenido bordes para ubicar.*/
+}
+
+/*AQUI IBA EL LOGO QUE QUITÉ*/
+/*codigo*/
+/*AQUI IBA EL LOGO QUE QUITÉ*/
+.headert .nav-links{
+  list-style: none; /* con esa propiedad le quita los puntitos que lleva cada item de la lista desordenada */
+}
+
+.headert .nav-links li{
+  display: inline-block; /*permite establecer un ancho y alto en el elemento  */
+  padding: 0 20px;  /* padding es el espacio entre el contenido del elemento y su borde */
+  align-items: flex-end;
+  
+}
+
+.headert .nav-links li:hover{
+  transform: scale(1.1); /* nos permiten alterar la escala de un elemento separando los distintos ejes */
+}
+
+.headert .nav-links a{
+  font-size: 700; /*se usa para modificar el tamaño de la fuente mostrada */
+  color: #eceff1; 
+  text-decoration: none;    
+}
+/* color del texto */
+.headert .nav-links li a:hover{
+  color: #c13bb6;
+}
+
+.headert .btn button{
+  margin-left: 23.5px; /* Establece la anchura del margen izquierdo de los elementos */
+  font-weight: 700; /* se usa para especificar el peso de la fuente */
+  color: #1b3039;
+  padding: 9px 25px;
+  background: #f36fc7; /*color de fondo */
+  border: none; /*se utiliza para establecer el mismo grosor, estilo y/o anchura de todos los bordes de un elemento.   */
+  border-radius: 50px; /*permite a los desarrolladores Web definir qué tan redondeadas serán las esquinas  */
+  cursor: pointer; /* cambia la apariencia del raton cuando se situa sobre un elemento, indicando que se puede hacer click en el */
+  transition: all 0.3s ease 0s; /* Permite definir la transición entre dos estados de un elemento */
+}
+
+.headert .btn button:hover{
+  background-color: #e2f1f8; /* define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave transparent*/
+  color: #c13bb6;
+  transform: scale(1.1); /* nos permiten alterar la escala de un elemento separando los distintos ejes*/
+}
+/*ESTILO PARA LA TABLA DE OPCIONES*/
+/*Codigo removido, encrarlo en notepad*/
+/*FIN DE LA TABLA DE OPCIONES*/
+body {
+  font-family:"Exo 2", sans-serif; /*estilo de la letra */
+  background: none /* define el color de fondo de un elemento, si es none no habra ninguno */
+}
+
+/*EFECTOS Y COLOR DEL TITULO*/
+.header {
+  max-width: 1200px; /*establece la anchura máxima de un elemento. Evita que el valor usado de la propiedad width sea ​​mayor que el valor especificado por max-width*/
+  margin: 0 auto; /* establece los márgenes de un elemento especificando entre uno y cuatro valores, donde cada valor es una longitud, un porcentaje o auto.*/
+  padding: 1rem; /*es el espacio que hay en un contenedor entre el contenido y los bordes del contenedor. */
+  display: flex; /*los nodos hijo se pueden distribuir en dirección vertical u horizontal y se pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre */
+  align-items: center; /* */
+  justify-content: center; /* */
+  height: calc(100vh - 4rem); /* */
+}
+
+.title-wrapper {
+  display: flex; /*los nodos hijo se pueden distribuir en dirección vertical u horizontal y se pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre */
+  align-items: center; 
+  justify-content: center; 
+  transform: skew(0, -10deg); /*Es un mapeo de corte (transvección) que distorsiona cada punto dentro de un elemento en un cierto ángulo en las direcciones horizontal y vertical.*/
+}
+
+.top-title {
+  order: 1; /*especifica el orden utilizado para disponer los elementos en su contenedor flexible. */
+  text-align: center; /* */
+  display: block; /*un elemnto block, siempre tiene algo de espacio por encima y debajo. es decir no acepta ningún otro elemneto a su lado. */
+  color: #fff; /* */
+  font-size: clamp(1rem, 4vw, 1.5rem); /* */
+  margin-bottom: 50px; /* */
+  padding-right: 2rem; /* */
+}
+
+.bottom-title {
+  order: 3; /* */
+  text-align: center; /* centra el texto de forma horizontal dentro de la linea.*/
+  display: block; /*no acepta ningún otro elemneto a su lado */
+  color: #fff; /* */
+  font-size: clamp(1rem, 4vw, 1.5rem); /* */
+  margin-top: 2rem; /*El rem, es una medida, cada rem representa 16px */
+  padding-left: 2rem; /* */
+}
+
+.game-title {
+  order: 2; /*especifica el orden utilizado para disponer los elementos en su contenedor flexible */
+  color: #fde9ff; 
+  font-weight: 900; /* Establece el grosor, de una fuente*/
+  text-transform: uppercase; /*permite transformar el texto de un elemento para mostrarlo en mayúsculas, minúsculas o una mezcla de ambas. uppercase: muestra todo el texto del elemento con letras mayúsculas.*/
+  font-size: clamp(3rem, 10vw, 6rem); /*Especifica la dimensión de la letra.  1VW es el 1% del ancho de la ventana gráfica del navegador.*/
+  line-height: 0.75em; /*establece la distancia entre líneas de texto. 0.75em representa 12px.*/
+  text-align: center; 
+  text-shadow: 3px 1px 1px #7a00fc, 2px 2px 1px #c70d4b, 4px 2px 1px #7a00fc,
+    3px 3px 1px #c70d4b, 5px 3px 1px #7a00fc, 4px 4px 1px #c70d4b,
+    6px 4px 1px #7a00fc, 5px 5px 1px #c70d4b, 7px 5px 1px #7a00fc,
+    6px 6px 1px #c70d4b, 8px 6px 1px #7a00fc, 7px 7px 1px #c70d4b,
+    9px 7px 1px #7a00fc; 
+}
+/* */
+span {
+    display: block; /*un elemnto block, siempre tiene algo de espacio por encima y debajo. es decir no acepta ningún otro elemneto a su lado */
+    position: relative; /*permite desplazar una caja respecto de su posición original establecida mediante el posicionamiento normal. */
+
+    &:before {
+      content: attr(data-text); /* */
+      position: absolute; /*establece de forma exacta la posición en la que se muestra la caja de un elemento */
+      text-shadow: 2px 2px 1px #e94aa1, -1px -1px 1px #c736f9,
+        -2px 2px 1px #e94aa1, 1px -1px 1px #f736f9; /*es la sombra del texto */
+      z-index: 1; /*define el orden de los elementos en el eje*/
+    }
+
+    &:nth-child(1) {
+      padding-right: 2.25rem; /*describe cuanto espacio colocar entre el borde derecho y el contenido del selector */
+    }
+
+    &:nth-child(2) {
+      padding-left: 2.25rem; /*describe cuanto espacio colocar entre el borde izquierdo y el contenido del selector */
+    }
+}
+
+/*CUERPO*/
+body{
+   /*  background-image: url(Imagenes/FondoDePagina.jpg); */
+    background-image: url(../Imagenes/FondoDePagina.jpg);
+    background-position: center; /* */
+    background-repeat:space; /*Define como se repiteten los fondos del documento */
+    background-size: cover; /*define autoaticamente el alto y ancho de la imagen deacuerdo a la ventana de visualización */
+    background-attachment: fixed; /*determina si la imagen especificada se desplazará con el contenido o será fija con respecto al lienzo*/
+    color: #f1eaea;
+    font-family:"Exo 2", sans-serif; /*permite al autor especificar el tipo de fuente para un elemento*/
+    text-align: center; /*centra el texto de forma horizontal dentro de la linea. */
+    display: grid; /*Divide la página en áreas o regiones principales. */
+
+}
+
+/*TEXTO DE LA PAGINA "NUEVOS LANZAMINETOS"*/
+.highlighted-title {
+  text-align: center;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.7);
+}
+/*FIN TEXTO DE LA PAGINA "NUEVOS LANZAMIENTOS"*/
+
+
+/* CODIGO DE LAS CARDS */
+
+.list {
+  display: flex; /* Utiliza flexbox para el diseño de la lista */
+  flex-wrap: wrap; /* Permite que las cartas se envuelvan si no caben en una sola línea */
+  justify-content: center; /* Centra las cartas horizontalmente dentro del contenedor flex */
+  align-items: flex-start; /* Alinea las cartas al inicio verticalmente */
+  min-height: 100vh; /* Establece la altura mínima de la sección al 100% del viewport */
+  padding: 20px; /* Añade relleno alrededor de la lista para separar del borde de la ventana */
+}
+
+.card {
+  position: relative; /* Establece la posición relativa para poder posicionar elementos hijos de forma absoluta */
+  width: 350px; /* Ancho fijo de cada carta */
+  height: 300px; /* Altura fija de cada carta */
+  margin: 20px; /* Margen alrededor de cada carta para separarlas */
+  display: inline-block; /* Muestra la carta como un bloque en línea */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para efecto de elevación */
+}
+
+.card .face {
+  position: absolute; /* Posición absoluta para la cara de la carta */
+  width: 100%; /* Ancho completo dentro del contenedor */
+  height: 100%; /* Altura completa dentro del contenedor */
+  backface-visibility: hidden; /* Oculta la cara posterior durante la animación de rotación */
+  border-radius: 10px; /* Borde redondeado para las esquinas de la carta */
+  overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+  transition: transform 0.5s; /* Transición suave para la animación de rotación */
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg); /* Inicialmente muestra la cara frontal de la carta */
+}
+
+.card .front img {
+  width: 100%; /* Ajusta la imagen al ancho completo de su contenedor */
+  height: 100%; /* Ajusta la imagen a la altura completa de su contenedor */
+  object-fit: cover; /* Ajusta la imagen manteniendo la relación de aspecto y cubriendo el contenedor */
+}
+
+.card .front h3 {
+  position: absolute; /* Posición absoluta para el título de la carta */
+  bottom: 0; /* Coloca el título en la parte inferior */
+  left: 0; /* Coloca el título en el borde izquierdo */
+  width: 100%; /* Ancho completo dentro del contenedor */
+  height: 45px; /* Altura fija para el título */
+  line-height: 45px; /* Alinea verticalmente el texto del título */
+  color: #fff; /* Color del texto */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el título */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0 10px; /* Añade relleno interno al título */
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg); /* Inicialmente oculta la cara posterior de la carta */
+  background: rgb(0, 0, 0); /* Fondo negro para la cara posterior */
+  padding: 15px; /* Relleno interno para el contenido de la cara posterior */
+  color: #f3f3f3; /* Color del texto */
+  display: flex; /* Utiliza flexbox para organizar los elementos */
+  flex-direction: column; /* Organiza los elementos en columnas */
+  justify-content: space-between; /* Distribuye uniformemente el espacio disponible entre los elementos */
+  text-align: center; /* Centra el texto */
+  border-radius: 10px; /* Borde redondeado para las esquinas de la carta */
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3; /* Borde superior de color gris claro */
+  height: 50px; /* Altura fija para el elemento de enlace */
+  line-height: 50px; /* Alinea verticalmente el texto del enlace */
+}
+
+.card .back .link a {
+  color: #f3f3f3; /* Color del texto del enlace */
+}
+
+.card .back h3 {
+  font-size: 30px; /* Tamaño de fuente del título */
+  margin-top: 20px; /* Margen superior */
+  letter-spacing: 2px; /* Espacio entre letras */
+}
+
+.card .back p {
+  letter-spacing: 1px; /* Espacio entre letras */
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg); /* Gira la carta para mostrar la cara posterior al hacer hover */
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg); /* Gira la carta de vuelta a la posición inicial */
+}
+
+/*FIN DEL CODIGO DE LAS CARTAS*/
+
+
+/* CODIGO DE ACORDEON */
+
+
+/*CARRUSEL DE IMAGENES GIRATORIAS*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2{
+  text-align: center;
+  font-size: 40px;
+  font-family: arial;
+  margin-top: 80px;
+  color: rgb(228, 228, 228);
+  text-shadow: 0px 0px 6px black;
+}
+
+.content-all{
+  width: 210px;
+  margin: auto;
+  perspective: 800px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 300px;
+}
+
+.content-carrousel{
+  width: 100%;
+  position: absolute;
+  animation: rotar 10s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+
+.content-carrousel figure{
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px black;
+  transition: all 300ms;
+  
+}
+
+.content-carrousel figure:hover{
+  box-shadow: 0px 0px 0px 0px black;
+  transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+  width: 100%;
+  transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+
+@keyframes rotar{
+  from{
+      transform: rotateY(0deg);
+  }to{
+      transform: rotateY(360deg);
+  }
+}
+
+/*FIN DE CARRUSEL DE IMAGENES GIRATORIAS*/
+

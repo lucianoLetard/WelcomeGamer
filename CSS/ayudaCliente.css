@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #dbdbdb; /* Fondo blanco */
+    color: #ffffff; /* Color de texto principal */
+}
+
+header {
+    background-color: rgb(16, 5, 5); /* Color de fondo para la cabecera */
+    color: #ffffff; /* Color de texto para la cabecera */
+    text-align: center;
+    padding: 20px 0;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para el contenido */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(22, 33, 55, 2.1); /* Sombra suave */
+}
+
+h1{
+    color: #ffffff;
+}
+
+h2 {
+    color: rgb(5, 5, 5); /* Color de texto para títulos principales */
+}
+
+p {
+    color: #000000;
+    line-height: 1.6;
+}
+
+h5{
+    color: #dbdbdb;
+}
+
+footer {
+    background-color: #000000; /* Color de fondo para el pie de página */
+    color: #dbdbdb; /* Color de texto para el pie de página */
+    text-align: center;
+    padding: 0px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
